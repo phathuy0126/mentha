@@ -1,0 +1,110 @@
+.c-animation {
+    .c-animation__leaftop,
+    .c-animation__leafright,
+    .c-animation__drop1,
+    .c-animation__drop2,
+    .c-animation__drop3,
+    .c-animation__drop4,
+    .c-animation__drop5,
+    .c-animation__drop6 {
+        transition: all 1s linear;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .c-animation__leaftop {
+        top: 1px;
+        left: 691px;
+        z-index: 1;
+        width: 295px;
+        height: 213px;
+        transform: rotate(1deg);
+    }
+
+    .c-animation__leafright {
+        top: 468px;
+        right: 0;
+    }
+
+    .c-animation__drop1 {
+        top: 450px;
+        left: 313px;
+    }
+
+    .c-animation__drop2 {
+        top: 560px;
+        left: 562px;
+    }
+
+    .c-animation__drop3 {
+        top: 548px;
+        right: 429px;
+    }
+
+    .c-animation__drop4 {
+        top: 111px;
+        right: 260px;
+    }
+
+
+    .c-animation__drop5 {
+        top: 62px;
+        left: 1099px;
+    }
+
+    .c-animation__drop6 {
+        top: 87px;
+        left: 548px;
+    }
+
+    .c-animation__drops {
+        transition: all 1.5s ease-in-out;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .c-animation__dropbig {
+        animation: down 3s linear infinite;
+    }
+
+    .c-animation__dropsmall {
+        animation: jumb 3s linear infinite;
+    }
+
+    @keyframes jumb {
+        50% {
+            transform: translateY(-25px);
+        }
+    }
+
+    @keyframes down {
+        50% {
+            transform: translateY(25px);
+        }
+    }
+}
+
+
+@include sp {
+    .c-animation {
+        .c-animation__drops {
+            display: none;
+        }
+
+        .c-animation__leaftop {
+            top: -9px;
+            left: 95px;
+            width: 114.5px;
+            height: 97px;
+        }
+
+        .c-animation__leafright {
+            top: 493px;
+            width: 105.5px;
+            height: 107px;
+        }
+    }
+}

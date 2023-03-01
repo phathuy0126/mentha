@@ -1,0 +1,31 @@
+
+.c-navbar {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    z-index: 1;
+
+    .c-navbar__item {
+        width: 197px;
+        height: 40px;
+        background-image: url("./assets/img/BG_nav.jpg");
+        display: flex;
+        align-items: center;
+        color: #fff;
+        padding-left: 22px;
+        margin-bottom: 14px;
+        font-size: 1.6rem;
+        line-height: 16px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+@include sp {
+    .c-navbar {
+        display: none;
+    }
+}

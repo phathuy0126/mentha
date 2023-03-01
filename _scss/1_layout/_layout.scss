@@ -1,0 +1,51 @@
+/* layout
+------------------------------------------------------------*/
+* {
+    font-family: $main-fonts;
+}
+
+body {
+    font-family: $main-fonts;
+    font-size: 1.4rem;
+    min-width: $base-width;
+    line-height: 1.5;
+    @include sp {
+        min-width: 320px;
+    }
+    background-image: url("./assets/img/BG.png");
+}
+//-------------------------------------------------------
+
+.l-wrapper {
+    max-width: 1920px;
+    margin: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $white;
+}
+
+.l-container {
+    max-width: 1030px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+@include tab {
+    .l-container {
+        padding: 0 30px;
+    }
+}
+
+@include sp {
+    .l-wrapper {
+        margin: 15px;
+    }
+
+    .l-container {
+        padding: 0 15px;
+    }
+}
+

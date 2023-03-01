@@ -1,0 +1,16 @@
+.c-menuicon {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+
+@include sp {
+    .c-menuicon {
+        display: block;
+    }
+}

@@ -1,0 +1,316 @@
+<%- include('_layouts/layout', { title: 'Home page' }); -%>
+
+  <!-- @meta -->
+  <meta name="description" content="Home page">
+  <!-- @@meta -->
+
+  <!-- @content -->
+  <main class="p-top">
+    <div class="l-container">
+      <div class="c-animation">
+        <img src="./assets/img/leaf.png" alt="c-animation" class="c-animation__leaftop">
+        <img src="./assets/img/leaf2.png" alt="c-animation" class="c-animation__leafright">
+        <div class="c-animation__drops">
+          <img src="./assets/img/drop1.png" alt="c-banner" class="c-animation__drop1 c-animation__dropbig">
+          <img src="./assets/img/drop2.png" alt="c-banner" class="c-animation__drop2 c-animation__dropsmall">
+          <img src="./assets/img/drop3.png" alt="c-banner" class="c-animation__drop3 c-animation__dropbig">
+          <img src="./assets/img/drop4.png" alt="c-banner" class="c-animation__drop4 c-animation__dropsmall">
+          <img src="./assets/img/drop5.png" alt="c-banner" class="c-animation__drop5 c-animation__dropbig">
+          <img src="./assets/img/drop6.png" alt="c-banner" class="c-animation__drop6 c-animation__dropsmall">
+        </div>
+      </div>
+    </div>
+    <nav class="c-navbar">
+      <ul class="c-navbar__list">
+        <li class="c-navbar__item">
+          <a href="#">トップ</a>
+        </li>
+        <li class="c-navbar__item">
+          <a href="#bannerlist">毎日にハッカ油</a>
+        </li>
+        <li class="c-navbar__item">
+          <a href="#intro">製品情報</a>
+        </li>
+        <li class="c-navbar__item">
+          <a href="#qa">Q&A</a>
+        </li>
+        <li class="c-navbar__item">
+          <a href="#process">ハッカ油コラム</a>
+        </li>
+        <li class="c-navbar__item">
+          <a href="#process">ハッカ油ムービー</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="c-navbarmobile">
+      <img src="./assets/img/iconmenumobile.png" alt="menuicon" class="c-menuicon">
+      <ul class="c-navbarmobile__list">
+        <li class="c-navbarmobile__item">
+          <a href="#">トップ</a>
+        </li>
+        <li class="c-navbarmobile__item">
+          <a href="#bannerlist">毎日にハッカ油</a>
+        </li>
+        <li class="c-navbarmobile__item">
+          <a href="#intro">製品情報</a>
+        </li>
+        <li class="c-navbarmobile__item">
+          <a href="#qa">Q&A</a>
+        </li>
+        <li class="c-navbarmobile__item">
+          <a href="#process">ハッカ油コラム</a>
+        </li>
+        <li class="c-navbarmobile__item">
+          <a href="#process">ハッカ油ムービー</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="l-container">
+      <img src="./assets/img/iconmenu.png" alt="menuicon" class="c-menuicon">
+      <div class="c-banner">
+        <div class="c-banner__bg">
+          <img src="./assets/img/banner.png" alt="c-banner" class="c-banner__img">
+        </div>
+        <div class="c-banner__content">
+          <img src="./assets/img/banner_content.png" alt="c-banner">
+        </div>
+        <button class="c-banner__btn">ハ ッ カ？ミ ン ト ？</button>
+      </div>
+      <div class="c-bannermobile">
+        <img src="./assets/img/bannermobile.png" alt="bannermobile">
+      </div>
+      <section id="bannerlist" class="c-bannerlist">
+        <div class="c-bannerlist__title">
+          <p class="c-bannerlist__titletop">使い 方い ろいろ</p>
+          <h1 class="c-bannerlist__titlebig">毎日にハッカ油</h1>
+        </div>
+        <div class="c-list">
+          <% linklists.main && linklists.main.forEach(link=> { %>
+
+            <% if (link.listBannerData) { %>
+              <div class="c-list__row">
+                <% link.listBannerData.forEach((item, index)=> { %>
+                  <% if(index < 4) { %>
+                    <div class="c-list__item c-list__item<%= index + 1 %>">
+                      <div class="c-list__body">
+                        <figure class="c-list__image">
+                          <% if(item.dailyUse==true) {%>
+                            <label class="c-list__labeldailyuse">
+                              <picture>
+                                <source media="(max-width:767px )" srcset="./assets/img/labelDailyUseMobile.png">
+                                <img src="./assets/img/labelDailyUse.png" alt=<%=item.title %>>
+                              </picture>
+                            </label>
+                            <% } %>
+                              <% if(item.recommend==true) {%>
+                                <label class="c-list__labelrecommend">
+                                  <picture>
+                                    <source media="(max-width:767px )" srcset="./assets/img/labelRecommendMobile.png">
+                                    <img src="./assets/img/labelRecommend.png" alt=<%=item.title %>>
+                                  </picture>
+                                </label>
+
+                                <% } %>
+                                  <img src=<%=item.image %> alt=<%= item.title %> class="c-list__img">
+                        </figure>
+                        <p class="c-list__title">
+                          <%= item.title %>
+                        </p>
+                      </div>
+                    </div>
+                    <% } %>
+                      <% }) %>
+              </div>
+              <div class="c-list__row">
+                <% link.listBannerData.forEach((item, index)=> { %>
+                  <% if(index>= 4) { %>
+                    <div class="c-list__item c-list__item<%= index + 1 %>">
+                      <div class="c-list__body">
+                        <figure class="c-list__image">
+                          <% if(item.dailyUse==true) {%>
+                            <label class="c-list__labeldailyuse">
+                              <img src="/_public/assets/img/labelDailyUse.png" alt=<%=item.title %>>
+                            </label>
+                            <% } %>
+                              <% if(item.recommend==true) {%>
+                                <label class="c-list__labelrecommend">
+                                  <picture>
+                                    <source media="(max-width:767px )" srcset="./assets/img/labelRecommendMobile.png">
+                                    <img src="./assets/img/labelRecommend.png" alt=<%=item.title %>>
+                                  </picture>
+                                </label>
+                                <% } %>
+                                  <img src=<%=item.image %> alt=<%= item.title %> class="c-list__img">
+                        </figure>
+                        <p class="c-list__title">
+                          <%= item.title %>
+                        </p>
+                      </div>
+                    </div>
+                    <% } %>
+                      <% }) %>
+              </div>
+              <% } %>
+                <% }) %>
+        </div>
+      </section>
+    </div>
+    <section id="intro" class="c-intro">
+      <div class="l-container">
+        <% if (typeof linklists !='undefined' ) { %>
+          <% linklists.main && linklists.main.forEach(link=> { %>
+            <% if (link.listIntro) { %>
+              <% link.listIntro.forEach(item=> { %>
+                <div class="c-boxseffect">
+                  <div class="c-boxseffect__heading">
+                    <div class="c-boxseffect__col1">
+                      <img src="<%= item.point %>" alt="c-intro">
+                      <div class="c-boxseffect__line"></div>
+                      <div class="c-boxseffect__point">Point</div>
+                    </div>
+                    <div class="c-boxseffect__col2">
+                      <h2 class="c-boxseffect__title">
+                        <%= item.title %>
+                      </h2>
+                      <p class="c-boxsEffect__desc">
+                        <%= item.desc %>
+                      </p>
+                    </div>
+                  </div>
+                  <p class="c-boxsEffect__descmb" style="display: none;">
+                    <%= item.desc %>
+                  </p>
+                  <div class="c-boxseffect__body">
+                    <% item.pointList.forEach(itemPoint=> { %>
+                      <div class="c-boxseffect__item">
+                        <picture>
+                          <source media="(max-width:767px )" srcset="<%= itemPoint.imagemb   %>">
+                          <img src="<%= itemPoint.image %>" alt="c-boxseffect" class="c-boxseffect__img">
+                        </picture>
+                        <img src="./assets/img/boxmore.png" alt="<%= itemPoint.title %>"  
+                          class="c-boxseffect__more">
+                        <div class="c-boxseffect__overlay">
+                          <h4 class="c-boxseffect__overlaytitle">
+                            <%= itemPoint.title %>
+                          </h4>
+                          <div class="c-boxseffect__overlayline"></div>
+                          <p class="c-boxseffect__overlaydesc">
+                            <%= itemPoint.desc %>
+                          </p>
+                          <a href="#" class="c-boxseffect__overlaybtn">
+                            <%= itemPoint.button %>
+                          </a>
+                        </div>
+                      </div>
+                      <% }) %>
+                  </div>
+                </div>
+                <% }) %>
+                  <% } %>
+                    <% }) %>
+                      <% } %>
+                        <div class="c-intro__footer">
+                          <h3 class="c-intro__footertitle">お買い求めは全国のドラッグストア、またはこちらから</h3>
+                          <h3 class="c-intro__footertitlemb" style="display: none;">お買い求めは全国のドラッグストア<br>、またはこちらから</h3>
+                          <div class="c-listweb">
+                            <a href="#" class="c-listweb__item">
+                              <img src="./assets/img/listWebItem1.png" alt="お買い求めは全国のドラッグストア、またはこちらから">
+                            </a>
+                            <a href="#" class="c-listweb__item">
+                              <img src="./assets/img/listWebItem2.png" alt="お買い求めは全国のドラッグストア、またはこちらから">
+                            </a>
+                            <a href="#" class="c-listweb__item">
+                              <img src="./assets/img/listWebItem3.png" alt="お買い求めは全国のドラッグストア、またはこちらから">
+                            </a>
+                            <a href="#" class="c-listweb__item">
+                              <img src="./assets/img/listWebItem4.png" alt="お買い求めは全国のドラッグストア、またはこちらから">
+                            </a>
+                          </div>
+                          <p class="c-intro__footerdesc">
+                            Amazon、Amazon.co.jp、及びAmazon.co.-jpロゴはAmazon.com, Inc.又はその関連会社の商標です。
+                          </p>
+                        </div>
+      </div>
+    </section>
+    <div class="l-container">
+      <section id="qa" class="c-qa">
+        <h2 class="c-qa__title">Q & A</h2>
+        <div class="c-qa__list">
+          <% linklists.main && linklists.main.forEach(link=> { %>
+            <% if (link.listIntro) { %>
+              <% link.qaList.forEach(item=> { %>
+                <dl class="c-qa__listitem">
+                  <dt class="c-qa__listtitle">
+                    <div class="c-qa__listicon">Q</div>
+                    <div class="c-qa__listtext">
+                      <%= item.title %>
+                    </div>
+                  </dt>
+                  <dd class="c-qa__listdesc">
+                    <%= item.desc %>
+                  </dd>
+                </dl>
+                <% }) %>
+                  <% } %>
+                    <% }) %>
+        </div>
+      </section>
+      <section id="process" class="c-process">
+        <div class="c-process__header">
+          <h6 class="c-process__title">日々の暮らしにお役立ち </h6>
+          <h2 class="c-process__titlebig">「ハッカ油コラム」へ</h2>
+        </div>
+        <div class="c-listprocess">
+
+          <% linklists.main && linklists.main.forEach(link=> { %>
+            <% if (link.processList) { %>
+              <% link.processList.forEach(item=> { %>
+
+                <div class="c-listprocess__item">
+                  <div class="c-listprocess__container">
+                    <div class="c-listprocess__head">
+                      <div class="c-listprocess__image">
+                        <img src="<%= item.image %>" alt="風邪やインフルエンザシーズンにもハッカ油" class="c-listProcess__img">
+                      </div>
+                      <div class="c-listprocess__title">
+                        <h6 class="c-listprocess__text">
+                          <%= item.title %>
+                        </h6>
+                        <h4 class="c-listprocess__textbig">
+                          <%= item.titleBig %>
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="c-listprocess__body">
+                      <p class="c-listprocess__desc">
+                        <%= item.desc %>
+                      </p>
+                    </div>
+                    <a href="#" class="c-listprocess__more">
+                      <%= item.more %>
+                    </a>
+                  </div>
+                  <div class="c-listprocess__icon">
+                    <picture>
+                      <source media="(max-width:767px )" srcset="./assets/img/arrowDownMobile.png">
+                      <img src="./assets/img/arrowRight.png" alt="風邪やインフルエンザシーズンにもハッカ油">
+                    </picture>
+                  </div>
+                </div>
+
+
+                <% }) %>
+                  <% } %>
+                    <% }) %>
+
+        </div>
+      </section>
+      <section class="c-bannerfooter">
+        <picture>
+          <source media="(max-width:767px )" srcset="./assets/img/bannerFootermobile.png">
+          <img src="./assets/img/bannerFooter.png" alt="c-bannerfooter">
+        </picture>
+      </section>
+    </div>
+  </main>
+  <!-- @@content -->

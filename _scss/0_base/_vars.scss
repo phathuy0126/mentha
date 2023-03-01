@@ -1,0 +1,23 @@
+@font-face {
+    font-family: SawarabiMincho;
+    src: url("/_public/fonts/SawarabiMincho-Regular.ttf");
+}
+
+//baseWidth
+$base-width: 1030px;
+
+$main-fonts: SawarabiMincho ,"游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+
+//color common
+
+
+$black: #000;
+$blackLight: #333; 
+$white: #fff;
+
+//text
+$text-primary-color: #176b6a;
+
+//button
+
+$bg-primary-button: #25a989;

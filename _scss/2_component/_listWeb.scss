@@ -1,0 +1,22 @@
+.c-listweb {
+    display: flex;
+    gap: 20px;
+    padding: 40px 0 50px;
+    transform: scale(1.07);
+}
+
+
+@include sp {
+    .c-listweb {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        transform: none;
+        padding: 0 15px;
+        gap: 24px;
+        margin-bottom: 20px;
+
+        .c-listweb__item {
+            width: 130px;
+        }
+    }
+}
