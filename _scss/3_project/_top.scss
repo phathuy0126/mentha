@@ -1,8 +1,15 @@
 .p-top {
     line-height: 2;
 
+    .c-header {
+        width: 100%;
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
     .c-bannerlist {
-        @include lh(25);
+        line-height: 1.56;
         padding-bottom: 120px;
         display: flex;
         flex-direction: column;
@@ -44,7 +51,7 @@
     }
 
     .c-list__item2 {
-        width: 30%;
+        width: 28%;
 
         .c-list__title {
             margin-left: -5px;
@@ -60,13 +67,14 @@
 
     .c-list__item3 {
         width: 29%;
+        transform: translateX(5px);
 
         .c-list__title {
-            padding-left: 20px;
+            padding-left: 11px;
             padding-bottom: 4px;
             letter-spacing: 1.5px;
             white-space: nowrap;
-            margin-bottom: -10px;
+            margin-bottom: 2px;
         }
 
         .c-list__body {
@@ -77,6 +85,7 @@
     .c-list__item4 {
         width: 28%;
         margin-top: -68px;
+        min-width: auto;
 
         .c-list__title {
             margin-left: -45px;
@@ -179,10 +188,10 @@
         margin-bottom: 70px;
         padding-top: 100px;
         padding-bottom: 110px;
-        background-image: url("./assets/img/bgIntro.png");
+        background: #f5f4ed;
 
         .c-intro__footer {
-            @include lh(26);
+            line-height: 1.62;
         }
 
         .c-intro__footertitle {
@@ -190,6 +199,7 @@
             color: $text-primary-color;
             text-align: center;
             letter-spacing: 3px;
+            font-weight: 400;
         }
 
         .c-intro__footerdesc {
@@ -208,12 +218,13 @@
 
     .c-qa__title {
         font-size: 3.6rem;
-        @include lh(26);
+        line-height: 1.62;
         color: $text-primary-color;
         text-align: center;
         margin-left: -93px;
         letter-spacing: -3px;
         margin-bottom: 41px;
+        font-weight: 400;
     }
 
     .c-qa__listitem {
@@ -237,7 +248,7 @@
         align-items: center;
         margin-right: 15px;
         font-size: 2.6rem;
-        @include lh(21);
+        line-height: 1.31;
         color: $blackLight;
     }
 
@@ -271,18 +282,20 @@
         color: $blackLight;
         border-radius: 60px;
     }
-
+    
     .c-process__title {
         font-size: 2rem;
         line-height: 0;
         letter-spacing: -0.1px;
         margin-left: -13px;
+        font-weight: 400;
     }
 
     .c-process__titlebig {
         font-size: 4.5rem;
         letter-spacing: 4px;
         line-height: 1.7;
+        font-weight: 400;
     }
 
     //banner footer
@@ -297,7 +310,7 @@
 @include sp {
     .p-top {
         .c-bannerlist {
-            @include lh(12.5);
+            line-height: 0.78;
             padding-bottom: 60px;
         }
 
@@ -536,10 +549,10 @@
             }
 
             .c-qa__listtext {
-                min-width: 270px;
                 font-size: 1.3rem;
                 letter-spacing: 1.4px;
                 line-height: 1.8;
+                word-break: break-word;
             }
 
             .c-qa__listtitle {
@@ -551,10 +564,6 @@
                 line-height: 1.7;
             }
 
-            .c-qa__listitem:not(.c-qa__listitem:first-child, .c-qa__listitem:nth-child(2)) {
-                display: none;
-            }
-
             .c-qa__listicon {
                 margin-right: 10px;
                 display: flex;
@@ -564,6 +573,8 @@
                 background-position: center;
                 font-size: 1.8rem;
                 padding: 12px;
+                width: 40px;
+                height: 37px;
             }
         }
 
@@ -581,12 +592,6 @@
                 margin: 0 auto 74px;
             }
 
-            .c-listprocess__item {
-                &:not(.c-listprocess__item:nth-child(1), .c-listprocess__item:nth-child(2), .c-listprocess__item:nth-child(3)) {
-                    display: none;
-                }
-            }
-
             .c-process__title,
 
             .c-process__titlebig {
@@ -602,7 +607,6 @@
             margin-bottom: 32px;
 
             .c-intro__footertitle {
-
                 display: none;
             }
 

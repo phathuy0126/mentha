@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    z-index: 1;
 
     .c-boxseffect__heading {
         display: flex;
@@ -27,7 +28,7 @@
 
     .c-boxseffect__point {
         font-size: 2.2rem;
-        @include lh(26);
+        line-height: 1.62;
         text-transform: uppercase;
     }
 
@@ -37,16 +38,17 @@
 
     .c-boxseffect__title {
         font-size: 3.6rem;
-        @include lh(26);
+        line-height: 1.62;
         color: #176b6a;
         margin-top: -6px;
         margin-bottom: 7px;
         letter-spacing: 3px;
+        font-weight: 400;
     }
 
-    .c-boxsEffect__desc {
+    .c-boxseffect__desc {
         font-size: 1.4rem;
-        @include lh(26);
+        line-height: 1.62;
         letter-spacing: 1.5px;
         line-height: 1.9;
     }
@@ -59,11 +61,10 @@
 
     .c-boxseffect__item {
         position: relative;
-        width: fit-content;
-
-        &:hover .c-boxseffect__overlay {
-            opacity: 0.8;
-        }
+        width: 330px;
+        height: 330px;
+        border-radius: 30px;
+        overflow: hidden;
     }
 
     .c-boxseffect__img {
@@ -76,11 +77,13 @@
         position: absolute;
         right: 20px;
         bottom: 20px;
+        cursor: pointer;
     }
-
+    
     .c-boxseffect__overlay {
-        opacity: 0;
         $spacing: 40px;
+        z-index: -1;
+        opacity: 0;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -90,15 +93,26 @@
         width: calc(100% - $spacing);
         height: calc(100% - $spacing);
         padding: 42px 45px;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.8s linear;
+
+        &.is-active {
+            z-index: 1;
+            opacity: 0.8;
+        }
     }
 
     .c-boxseffect__overlaytitle {
         font-size: 2.4rem;
-        @include lh(26);
+        line-height: 1.62;
         color: $text-primary-color;
         text-align: center;
         letter-spacing: 1.5px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
     }
 
     .c-boxseffect__overlayline {
@@ -110,20 +124,26 @@
 
     .c-boxseffect__overlaydesc {
         font-size: 1.2rem;
-        @include lh(21);
+        line-height: 1.31;
         color: $black;
         margin-bottom: 25px;
         letter-spacing: 1px;
         line-height: 1.7;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
     }
 
     .c-boxseffect__overlaybtn {
-        background-image: url("./assets/img/BG_nav.jpg");
+        background-image: url("./assets/img/BG_nav.png");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         font-size: 1.6rem;
-        @include lh(26);
+        line-height: 1.62;
         color: $white;
         display: block;
         width: 100%;
@@ -134,7 +154,7 @@
 }
 
 .c-boxseffect:nth-child(2) {
-    .c-boxsEffect__desc {
+    .c-boxseffect__desc {
         width: 310px;
     }
 }
@@ -185,13 +205,13 @@
             letter-spacing: 1.5px;
         }
 
-        .c-boxsEffect__desc {
+        .c-boxseffect__desc {
             display: none;
             font-size: 1.3rem;
             width: 100% !important;
         }
 
-        .c-boxsEffect__descmb {
+        .c-boxseffect__descmb {
             display: block !important;
             margin-bottom: 20px;
             line-height: 1.5;
@@ -201,11 +221,17 @@
 
 
         .c-boxseffect__body {
+            flex-direction: column;
             gap: 10px;
         }
 
         .c-boxseffect__item {
+            width: 100%;
+            max-width: 315px;
+            height: 315px;
             transform: translateY(1px);
+            border-radius: 15px;
+            margin: 0 auto;
         }
 
         .c-boxseffect__more {
@@ -218,12 +244,11 @@
             width: calc(100% - 30px);
             height: calc(100% - 30px);
             padding: 50px 20px;
-            border-radius: 12px;
+            border-radius: 26px;
         }
 
         .c-boxseffect__overlaytitle {
             font-size: 1.6rem;
-
         }
 
         .c-boxseffect__overlayline {
@@ -238,21 +263,18 @@
 
         .c-boxseffect__overlaybtn {
             font-size: 1.3rem;
-            padding: 2.7px 0;
+            padding: 1.5px 0;
             transform: translateX(-1px);
         }
     }
 
-    .c-boxseffect:nth-child(2) .c-boxsEffect__descmb {
+    .c-boxseffect:nth-child(2) .c-boxseffect__descmb {
         max-width: 290px;
         letter-spacing: 0.3px;
     }
 
-    .c-boxseffect:nth-child(3) .c-boxsEffect__descmb {
+    .c-boxseffect:nth-child(3) .c-boxseffect__descmb {
         letter-spacing: 0.3px;
     }
 
-    .c-boxseffect .c-boxseffect__item:not(.c-boxseffect__item:first-child) {
-        display: none;
-    }
 }

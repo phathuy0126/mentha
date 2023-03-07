@@ -17,7 +17,6 @@ body {
 //-------------------------------------------------------
 
 .l-wrapper {
-    max-width: 1920px;
     margin: 30px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,17 +24,19 @@ body {
 }
 
 .l-container {
-    max-width: 1030px;
+    max-width: 1130px;
     width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    padding: 0 50px;
 }
+
 
 @include tab {
     .l-container {
-        padding: 0 30px;
+        padding: 0 50px;
     }
 }
 

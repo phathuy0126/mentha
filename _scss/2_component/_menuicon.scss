@@ -1,16 +1,27 @@
 .c-menuicon {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    top: 30px;
+    left: 30px;
     width: 45px;
     height: 45px;
+    background-color: #fff;
+    border-radius: 100rem;
     cursor: pointer;
+    z-index: 2;
 }
 
 
-@include sp {
+@include tab {
     .c-menuicon {
         display: block;
     }
 }
+
+@include sp {
+    .c-menuicon {
+        top: 15px;
+        left: 15px;
+    }
+}
+

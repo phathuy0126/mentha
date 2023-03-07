@@ -9,6 +9,7 @@
 
     .c-list__item { 
         width: 25%;
+        min-width: fit-content;
     }
     
     .c-list__body {
@@ -31,12 +32,16 @@
         padding-left: 10px;
         border-style: dashed;
         font-size: 1.4rem;
-        @include lh(21);
+        line-height: 1.31;
     }
 }
 
 @include sp {
     .c-list {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+
         .c-list__title {
             border-style: dotted;
         }

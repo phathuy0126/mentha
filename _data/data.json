@@ -7,37 +7,37 @@
         "listBannerData": [
           { 
             "dailyUse": true,
-            "image": "/_public/assets/img/bannerListItem1.png",
+            "image": "./assets/img/bannerListItem1.png",
             "title": "ハッカ水"
           },
           {
-            "image": "/_public/assets/img/bannerListItem2.png",
+            "image": "./assets/img/bannerListItem2.png",
             "title": "ハッカの虫除けスプレー"
           },
           {
-            "image": "/_public/assets/img/bannerListItem3.png",
+            "image": "./assets/img/bannerListItem3.png",
             "title": "ハッカのリネンウォーター"
           },
           {
             "dailyUse":true,
-            "image": "/_public/assets/img/bannerListItem4.png",
+            "image": "./assets/img/bannerListItem4.png",
             "title": "ハッカのエアフレッシュナー"
           },
           {
-            "image": "/_public/assets/img/bannerListItem5.png",
+            "image": "./assets/img/bannerListItem5.png",
             "title": "ハッカの清涼スプレー"
           },
           {
             "recommend": true,
-            "image": "/_public/assets/img/bannerListItem6.png",
+            "image": "./assets/img/bannerListItem6.png",
             "title": "ハッカマスク"
           },
           {
-            "image": "/_public/assets/img/bannerListItem7.png",
+            "image": "./assets/img/bannerListItem7.png",
             "title": "ハッカで安息"
           },
           {
-            "image": "/_public/assets/img/bannerListItem8.png",
+            "image": "./assets/img/bannerListItem8.png",
             "title": "ハッカの入浴剤"
           }
         ],
@@ -56,12 +56,14 @@
               },
               {
                 "image": "./assets/img/point1-2.png",
+                "imagemb": "./assets/img/point1-2.png",
                 "title": "部屋干しも安心",
                 "desc": "湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍！ 優しい自然な香りですっきりさわやか",
                 "button": "ハッカ油コラムへ"
               },
               {
                 "image": "./assets/img/point1-3.png",
+                "imagemb": "./assets/img/point1-3.png",
                 "title": "部屋干しも安心",
                 "desc": "湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍！ 優しい自然な香りですっきりさわやか",
                 "button": "ハッカ油コラムへ"
@@ -82,12 +84,14 @@
               },
               {
                 "image": "./assets/img/point2-2.png",
+                "imagemb": "./assets/img/point2-2.png",
                 "title": "部屋干しも安心",
                 "desc": "湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍！ 優しい自然な香りですっきりさわやか",
                 "button": "ハッカ油コラムへ"
               },
               {
                 "image": "./assets/img/point2-3.png",
+                "imagemb": "./assets/img/point2-3.png",
                 "title": "部屋干しも安心",
                 "desc": "湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍！ 優しい自然な香りですっきりさわやか",
                 "button": "ハッカ油コラムへ"
@@ -108,12 +112,14 @@
               },
               {
                 "image": "./assets/img/point3-2.png",
+                "imagemb": "./assets/img/point3-2.png",
                 "title": "部屋干しも安心",
                 "desc": "湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍！ 優しい自然な香りですっきりさわやか",
                 "button": "ハッカ油コラムへ"
               },
               {
                 "image": "./assets/img/point3-3.png",
+                "imagemb": "./assets/img/point3-3.png",
                 "title": "部屋干しも安心",
                 "desc": "湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍！ 優しい自然な香りですっきりさわやか",
                 "button": "ハッカ油コラムへ"

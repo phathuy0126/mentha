@@ -26,8 +26,15 @@
     }
 }
 
+// Safari 10.1+
+@mixin safari {
+    @media not all and (min-resolution:0.001dpcm) {
+        @supports (-webkit-appearance:none) {
+            @content;
+        }
+    }
+}
 
-
-@mixin lh ($px) {
-    line-height: calc($px/16);
-}   
+@mixin lh($px) {
+    line-height: calc($px / 16);
+}

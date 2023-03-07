@@ -1,4 +1,5 @@
 .c-navbarmobile {
+    overflow-y: auto;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,19 +17,17 @@
         transform: translateX(0);
     }
 
-    .c-menuicon {
-        margin: 15px;
-    }
-
     &__list {
         margin-top: 75px;
+        padding: 0 15px;
     }
 
     &__item {
-        padding: 20px 0;
+        padding: 19.7px 0;
         color: $white;
         font-size: 2rem;
         border-bottom: 1px solid #3a5656;
         text-align: center;
+        letter-spacing: 2px;
     }
 }

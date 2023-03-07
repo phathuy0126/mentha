@@ -1,9 +1,23 @@
 .c-listprocess {
     .c-listprocess__item {
+        position: relative;
         display: flex;
         padding: 34px 0;
         margin: 0 85px 1.03%;
         border-bottom: 1px solid #176b6a;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .c-listprocess__link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
     }
 
 
@@ -12,11 +26,14 @@
         width: 40px;
 
         img {
-            margin-top: auto;
-            margin-bottom: 60px;
-            margin-right: -2px;
             transform: translateY(82px);
         }
+    }
+
+    @include safari {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .c-listprocess__head {
@@ -26,8 +43,24 @@
     }
 
     .c-listprocess__image {
+        position: relative;
+        max-width: 275px;
+        width: 100%;
         margin-right: 15px;
         margin-top: -13px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .c-listprocess__imgcontent {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        text-align: center;
+        font-size: 4.4rem;
+        line-height: 0.5;
+        letter-spacing: 5px;
+        color: #176b6a;
     }
 
     .c-listprocess__img {
@@ -40,17 +73,20 @@
         color: $blackLight;
         letter-spacing: 2.2px;
         transform: translateY(5px);
+        flex: 1;
     }
-
+    
     .c-listprocess__text {
         font-size: 1.4rem;
         line-height: 0;
         letter-spacing: 1.3px;
+        font-weight: 400;
     }
 
     .c-listprocess__textbig {
         font-size: 2.5rem;
         letter-spacing: 2.5px;
+        font-weight: 400;
     }
 
     .c-listprocess__body {
@@ -59,7 +95,7 @@
 
     .c-listprocess__desc {
         font-size: 1.4rem;
-        @include lh(21);
+        line-height: 1.31;
         color: $blackLight;
         letter-spacing: 1.3px;
         line-height: 1.5;
@@ -86,15 +122,40 @@
             border: none;
             padding-bottom: 32px;
             padding-top: 0;
+
+            &:hover {
+                opacity: 1;
+            }
         }
 
-        
+        .c-listprocess__img {
+            display: none;
+        }
+
+        .c-listprocess__imgcontent {
+            position: relative;
+            top: 0;
+            left: 0;
+            font-size: 2rem;
+            width: 85%;
+        }
+
+        .c-listprocess__link {
+            display: none;
+        }
 
         .c-listprocess__icon {
+            &.is-active img {
+                transform: rotate(180deg);
+            }
+
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                transform: translateY(0);
+                transform: rotate(0deg);
+                transition: all 0.3s ease;
             }
             background-color: $text-primary-color;
             width: 100%;
@@ -113,11 +174,8 @@
             font-size: 1.3rem;
             text-align: right;
             text-decoration: underline;
+            text-underline-position: under;
             margin: 10px 0 14px;
-        }
-
-        .c-listprocess__item:first-child .c-listprocess__icon img { 
-            transform: rotate(180deg);
         }
 
         .c-listprocess__title {
@@ -146,15 +204,21 @@
         .c-listprocess__desc {
             font-size: 1.3rem;
             line-height: 1.7;
-        }
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: 0.5s linear;
 
-        .c-listprocess__item:not(.c-listprocess__item:first-child) .c-listprocess__body {
-            display: none;
+            &.is-active {
+                opacity: 1;
+                height: auto;
+            }
         }
 
         .c-listprocess__image {
             width: 94px;
-            margin-right: 8px;
+            height: 35px;
+            margin-right: -5px;
             transform: translateY(-3px);
         }
         

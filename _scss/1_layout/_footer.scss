@@ -1,7 +1,6 @@
 .c-footer {
     display: flex;
     justify-content: space-between;
-    @include lh(24);
     padding-bottom: 70px;
 
     .c-footer__info {
