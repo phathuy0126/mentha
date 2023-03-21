@@ -4,7 +4,6 @@ const leafright = document.querySelector('.c-animation__leafright');
 
 const boxmore = document.querySelectorAll('.c-boxseffect__more');
 
-const width = document.body.innerWidth;
 var lastScrollTop = 0;
 
 const activeClass = (value) => {
@@ -15,10 +14,8 @@ const activeClass = (value) => {
     } else {
         drops.style.transform = 'translateY(-1000px)';
 
-        if (width > 768) {
             leaftop.style.transform = 'translateY(-60px)';
             leafright.style.transform = 'translateX(60px)';
-        }
     }
 }
 
@@ -61,27 +58,47 @@ boxmore.forEach((item) => {
     })
 })
 
-const phone = document.querySelector('.c-footer__phone');
-
-window.addEventListener('resize', (e) => {
-    if (e.target.innerWidth <= 1025) {
-        phone.setAttribute('href','tel: 06-6231-5626');
-    } else {
-        phone.setAttribute('href','#');
-    }
-})
-
-if (width <= 1025) {
-    phone.setAttribute('href','tel: 06-6231-5626');
-} else {
-    phone.setAttribute('href','#');
-}
-
 const listMoreSp = document.querySelectorAll('.c-listprocess__icon');
 
 listMoreSp.forEach((more) => {
     more.addEventListener('click', (e) => {
-        e.target.parentElement.querySelector('.c-listprocess__desc').classList.toggle('is-active');
-        e.target.classList.toggle('is-active');
+        if (e.target.classList.contains('c-listprocess__iconpc')) {
+            e.target.parentElement.parentElement.parentElement.querySelector('.c-listprocess__body').classList.toggle('is-active');
+            e.target.parentElement.parentElement.classList.toggle('is-active');
+        } else {
+            e.target.parentElement.querySelector('.c-listprocess__body').classList.toggle('is-active');
+            e.target.classList.toggle('is-active');
+        }
     })
 })
+
+
+// let section = document.querySelectorAll('.c-section'); console.log(section);
+// let lists = document.querySelectorAll('.c-navbar__item');console.log(lists);
+// function activeLink(){
+//     lists.forEach((item) => {
+//         item.classList.remove('is-active');
+//     })
+//     this.classList.add('is-active')
+// }
+// lists.forEach((item) => {
+//     item.addEventListener('click',activeLink);
+// })
+
+// window.onscroll = () =>{
+//   section.forEach(sec =>{
+//     let top = window.scrollY; 
+//     let offset = sec.offsetTop;
+//     let height = sec.offsetHeight;
+//     let id = '#' + sec.getAttribute('id');
+//     console.log(sec, sec.offsetTop);
+//     if(top >= offset && top <= offset + height ){
+//         lists.forEach((item) => {
+//             item.classList.remove('is-active');
+//             if (id == item.querySelector('a').getAttribute("href")) {
+//                 item.classList.add('is-active');
+//             }
+//         })
+//     } 
+//   })
+// };

@@ -1,6 +1,14 @@
 .c-list {
     .c-list__row {
         display: flex;
+        @include tab {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 70px;
+        }
+        @include sp {
+            gap: 0;
+        }
     }
 
     .c-list__row:not(.c-list__row:last-child) {
@@ -9,12 +17,20 @@
 
     .c-list__item { 
         width: 25%;
-        min-width: fit-content;
+        @include tab {
+            width: 42% !important;
+        }
     }
     
     .c-list__body {
         display: flex;
         align-items: center;
+        @include tab {
+            justify-content: center;
+        }
+        @include sp {
+            justify-content: flex-start;
+        }
     }
 
     .c-list__image {

@@ -44,12 +44,14 @@
           <a href="#process">ハッカ油コラム</a>
         </li>
         <li class="c-navbar__item">
-          <a href="#process">ハッカ油ムービー</a>
+          <a href="#bannerfooter">ハッカ油ムービー</a>
         </li>
       </ul>
     </nav>
     <nav class="c-navbarmobile">
       <img src="./assets/img/iconmenumobile.png" alt="ハッカ油は、毎日の暮らしを豊かにする魔法のしずく" class="c-menuicon">
+      <img src="./assets/img/fixedtopmb.png" alt="ハッカ油は、毎日の暮らしを豊かにする魔法のしずく" class="c-navbarmobile__fixedtop">
+      <img src="./assets/img/fixedbottommb.png" alt="ハッカ油は、毎日の暮らしを豊かにする魔法のしずく" class="c-navbarmobile__fixedbottom">
       <ul class="c-navbarmobile__list">
         <li class="c-navbarmobile__item">
           <a href="#">トップ</a>
@@ -67,31 +69,37 @@
           <a href="#process">ハッカ油コラム</a>
         </li>
         <li class="c-navbarmobile__item">
-          <a href="#process">ハッカ油ムービー</a>
+          <a href="#bannerfooter">ハッカ油ムービー</a>
         </li>
       </ul>
     </nav>
-    
+
     <section class="c-header">
       <div class="c-banner">
         <div class="c-banner__bg">
-          <img src="./assets/img/banner.png" alt="ハッカ油は、毎日の暮らしを豊かにする魔法のしずく" class="c-banner__img">
+          <picture>
+            <source media="(max-width:767px )" srcset="./assets/img/bannermobile.png">
+            <img src="./assets/img/banner.png" alt="ハッカ油は、毎日の暮らしを豊かにする魔法のしずく" class="c-banner__img">
+          </picture>
         </div>
         <div class="c-banner__content">
-          <h1><img src="./assets/img/banner_content.png" alt="ハッカ油は、毎日の暮らしを豊かにする魔法のしずく"></h1>
+        <h1>
+          <picture>
+            <source media="(max-width:767px )" srcset="./assets/img/bannercontentmb.png">
+            <img src="./assets/img/banner_content.png" alt="ハッカ油は、毎日の暮らしを豊かにする魔法のしずく">
+          </picture>
+        </h1>
         </div>
-        <button class="c-banner__btn">ハ ッ カ？ミ ン ト ？</button>
+        <a href="#" class="c-banner__btn">ハ ッ カ？ミ ン ト ？</a>
       </div>
     </section>
     <div class="l-container">
       <img src="./assets/img/iconmenu.png" alt="ハッカ油は、毎日の暮らしを豊かにする魔法のしずく" class="c-menuicon">
     </div>
-    <div class="c-bannermobile">
-      <div class="l-container">
-        <img src="./assets/img/bannermobile.png" alt="bannermobile">
-      </div>
-    </div>
-    <section id="bannerlist" class="c-bannerlist">
+
+
+    
+    <div id="bannerlist" class="c-section c-bannerlist">
       <div class="l-container">
         <div class="c-bannerlist__title">
           <p class="c-bannerlist__titletop">使い 方い ろいろ</p>
@@ -107,20 +115,20 @@
                       <div class="c-list__body">
                         <figure class="c-list__image">
                           <% if(item.dailyUse==true) {%>
-                            <label class="c-list__labeldailyuse">
+                            <div class="c-list__labeldailyuse">
                               <picture>
                                 <source media="(max-width:767px )" srcset="./assets/img/labelDailyUseMobile.png">
                                 <img src="./assets/img/labelDailyUse.png" alt=<%=item.title %>>
                               </picture>
-                            </label>
+                            </div>
                             <% } %>
                               <% if(item.recommend==true) {%>
-                                <label class="c-list__labelrecommend">
+                                <div class="c-list__labelrecommend">
                                   <picture>
                                     <source media="(max-width:767px )" srcset="./assets/img/labelRecommendMobile.png">
                                     <img src="./assets/img/labelRecommend.png" alt=<%=item.title %>>
                                   </picture>
-                                </label>
+                                </div>
 
                                 <% } %>
                                   <img src=<%=item.image %> alt=<%= item.title %> class="c-list__img">
@@ -140,17 +148,17 @@
                       <div class="c-list__body">
                         <figure class="c-list__image">
                           <% if(item.dailyUse==true) {%>
-                            <label class="c-list__labeldailyuse">
+                            <div class="c-list__labeldailyuse">
                               <img src="./assets/img/labelDailyUse.png" alt=<%=item.title %>>
-                            </label>
+                            </div>
                             <% } %>
                               <% if(item.recommend==true) {%>
-                                <label class="c-list__labelrecommend">
+                                <div class="c-list__labelrecommend">
                                   <picture>
                                     <source media="(max-width:767px )" srcset="./assets/img/labelRecommendMobile.png">
                                     <img src="./assets/img/labelRecommend.png" alt=<%=item.title %>>
                                   </picture>
-                                </label>
+                                </div>
                                 <% } %>
                                   <img src=<%=item.image %> alt=<%= item.title %> class="c-list__img">
                         </figure>
@@ -166,8 +174,8 @@
                 <% }) %>
         </div>
       </div>
-    </section>
-    <section id="intro" class="c-intro">
+    </div>
+    <section id="intro" class="c-section c-intro">
       <div class="l-container">
         <% if (typeof linklists !='undefined' ) { %>
           <% linklists.main && linklists.main.forEach(link=> { %>
@@ -244,7 +252,7 @@
       </div>
     </section>
     <div class="l-container">
-      <section id="qa" class="c-qa">
+      <section id="qa" class="c-section c-qa">
         <h2 class="c-qa__title">Q & A</h2>
         <div class="c-qa__list">
           <% linklists.main && linklists.main.forEach(link=> { %>
@@ -266,7 +274,7 @@
                     <% }) %>
         </div>
       </section>
-      <section id="process" class="c-process">
+      <section id="process" class="c-section c-process">
         <div class="c-process__header">
           <h3 class="c-process__title">日々の暮らしにお役立ち </h3>
           <h2 class="c-process__titlebig">「ハッカ油コラム」へ</h2>
@@ -276,9 +284,6 @@
           <% linklists.main && linklists.main.forEach(link=> { %>
             <% if (link.processList) { %>
               <% link.processList.forEach((item,index)=> { %>
-
-                
-
                 <div class="c-listprocess__item">
                   <a href="#" class="c-listprocess__link"></a>
                   <div class="c-listprocess__container">
@@ -287,7 +292,13 @@
                         <img src="<%= item.image %>" alt="風邪やインフルエンザシーズンにもハッカ油" class="c-listprocess__img">
                         <div class="c-listprocess__imgcontent">
                           <img src="./assets/img/processtext.png" alt="風邪やインフルエンザシーズンにもハッカ油">
-                          <p><%= 11 - index %></p>
+                          <p>
+                            <% if(index<2) {%>
+                              <%= 11 - index %>
+                                <% } else { %>
+                                  0<%= 11 - index %>
+                                    <% } %>
+                          </p>
                         </div>
                       </div>
                       <div class="c-listprocess__title">
@@ -299,16 +310,14 @@
                         </h4>
                       </div>
                     </div>
-                    <div class="c-listprocess__body">
-                      <p class="c-listprocess__desc <% if (index == 0) { %>
-                        <%= 'is-active' %>  
-                      <% } %>">
+                    <div class="c-listprocess__body <% if (index == 0) { %>
+                      <%= 'is-active' %>  
+                    <% } %>">
+                      <p class="c-listprocess__desc">
                         <%= item.desc %>
                       </p>
+                      <a href="#" class="c-listprocess__more">詳しく見る</a>
                     </div>
-                    <a href="#" class="c-listprocess__more">
-                      <%= item.more %>
-                    </a>
                   </div>
                   <div class="c-listprocess__icon <% if (index == 0) { %>
                     <%= 'is-active' %>  
@@ -325,11 +334,13 @@
 
         </div>
       </section>
-      <div class="c-bannerfooter">
-        <picture>
-          <source media="(max-width:767px )" srcset="./assets/img/bannerFootermobile.png">
-          <img src="./assets/img/bannerFooter.png" alt="さわやかハッカ油で虫除け対策のイメージ写真">
-        </picture>
+      <div id="bannerfooter" class="c-section c-bannerfooter">
+        <div class="c-bannerfooter__img">
+          <picture>
+            <source media="(max-width:767px )" srcset="./assets/img/bannerFootermobile.png">
+            <img src="./assets/img/bannerFooter.png" alt="さわやかハッカ油で虫除け対策のイメージ写真">
+          </picture>
+        </div>
       </div>
     </div>
   </main>

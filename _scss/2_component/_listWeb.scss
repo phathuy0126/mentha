@@ -1,8 +1,16 @@
 .c-listweb {
     display: flex;
-    gap: 20px;
     padding: 40px 0 50px;
     transform: scale(1.07);
+
+    .c-listweb__item {
+        border-radius: 20px;
+        overflow: hidden;
+
+        &:not(.c-listweb__item:last-child) {
+            margin-right: 20px;
+        }
+    }
 }
 
 
@@ -12,13 +20,26 @@
         grid-template-columns: 1fr 1fr;
         transform: none;
         padding: 0 15px;
-        gap: 24px;
         margin-bottom: 20px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
 
         .c-listweb__item {
             width: 100%;
             max-width: 130px;
+            height: 55px;
             margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+
+            &:nth-child(1n) {
+                margin-right: 20px;
+            }
+
+            &:not(.c-listweb__item:last-child) {
+                margin-bottom: 20px;
+            }
         }
     }
 }

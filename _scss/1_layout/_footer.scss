@@ -17,12 +17,22 @@
             margin-left: 12px;
             margin-top: 5px;
         }
+        @include tab {
+            margin-left: 20px;
+        }
     }
 
     .c-footer__by {
         margin-top: 6px;
         margin-left: -15px;
         letter-spacing: 1.4px;
+    }
+
+    .c-footer__phone {
+        pointer-events: none;
+        @include tab {
+            pointer-events: initial;
+        }
     }
 }
 

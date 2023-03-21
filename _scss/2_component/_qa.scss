@@ -1,0 +1,108 @@
+.c-qa {
+    padding-left: 85px;
+    padding-bottom: 60px;
+    @include tab {
+        padding-left: 0;
+    }
+}
+
+.c-qa__title {
+    font-size: 3.6rem;
+    line-height: 1.62;
+    color: $text-primary-color;
+    text-align: center;
+    margin-left: -93px;
+    letter-spacing: -3px;
+    margin-bottom: 41px;
+    font-weight: 400;
+    @include tab {
+        margin-left: 0;
+    }
+}
+
+.c-qa__listitem {
+    max-width: 850px;
+    padding-bottom: 45px;
+}
+
+.c-qa__listtitle {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.c-qa__listicon {
+    background-image: url("./assets/img/dtIcon.png");
+    background-repeat: no-repeat;
+    width: 59px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 2.6rem;
+    line-height: 1.31;
+    color: $blackLight;
+}
+
+.c-qa__listtext {
+    font-size: 1.4rem;
+    color: $text-primary-color;
+    letter-spacing: 1.3px;
+}
+
+.c-qa__listdesc {
+    font-size: 1.4rem;
+    color: $blackLight;
+    line-height: 1.6;
+    letter-spacing: 1.3px;
+}
+
+@include sp {
+    //qa
+    .c-qa {
+        padding-left: 0;
+        padding-bottom: 20px;
+
+        .c-qa__listitem {
+            padding-bottom: 15px;
+        }
+
+        .c-qa__title {
+            margin-left: 0;
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: 13px;
+            letter-spacing: -2px;
+        }
+
+        .c-qa__listtext {
+            font-size: 1.3rem;
+            letter-spacing: 1.4px;
+            line-height: 1.8;
+            word-break: break-word;
+        }
+
+        .c-qa__listtitle {
+            padding-bottom: 0;
+        }
+
+        .c-qa__listdesc {
+            font-size: 1.3rem;
+            line-height: 1.7;
+        }
+
+        .c-qa__listicon {
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: contain;
+            background-position: center;
+            font-size: 1.8rem;
+            padding: 12px;
+            width: 40px;
+            height: 37px;
+        }
+    }
+}

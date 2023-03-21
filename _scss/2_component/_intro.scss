@@ -1,0 +1,54 @@
+//intro---------------------------
+.c-intro {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    padding-top: 100px;
+    padding-bottom: 110px;
+    background-image: url("./assets/img/bgintro.png");
+
+    .c-intro__footer {
+        line-height: 1.62;
+    }
+
+    .c-intro__footertitle {
+        font-size: 3rem;
+        color: $text-primary-color;
+        text-align: center;
+        letter-spacing: 3px;
+        font-weight: 400;
+    }
+
+    .c-intro__footerdesc {
+        font-size: 1.2rem;
+        color: $blackLight;
+        text-align: center;
+        letter-spacing: 1.4px;
+    }
+}
+
+@include sp {
+    .c-intro {
+        padding-top: 38px;
+        padding-bottom: 57px;
+        margin-bottom: 32px;
+
+        .c-intro__footertitle {
+            display: none;
+        }
+
+        .c-intro__footertitlemb {
+            color: $text-primary-color;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: block !important;
+            text-align: center;
+            letter-spacing: 1.6px;
+            transform: translateX(1px);
+        }
+
+        .c-intro__footerdesc {
+            font-size: 1.3rem;
+            letter-spacing: 1.3px;
+        }
+    }
+}

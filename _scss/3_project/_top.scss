@@ -6,6 +6,9 @@
         max-width: 1160px;
         margin: 0 auto;
         padding: 0 20px;
+        @include sp {
+            padding: 15px;
+        }
     }
 
     .c-bannerlist {
@@ -31,6 +34,9 @@
         font-size: 4.6rem;
         letter-spacing: 9px;
         font-weight: 400;
+        @include tab {
+            margin-bottom: 100px;
+        }
     }
 
     // list banner
@@ -69,11 +75,14 @@
         width: 29%;
         transform: translateX(5px);
 
+        .c-list__image {
+            min-width: fit-content;
+        }
+
         .c-list__title {
             padding-left: 11px;
             padding-bottom: 4px;
             letter-spacing: 1.5px;
-            white-space: nowrap;
             margin-bottom: 2px;
         }
 
@@ -83,24 +92,36 @@
     }
 
     .c-list__item4 {
-        width: 28%;
+        width: 29%;
         margin-top: -68px;
         min-width: auto;
+        transform: translateX(-16px);
 
         .c-list__title {
-            margin-left: -45px;
-            white-space: nowrap;
+            margin-left: -60px;
             margin-top: 48px;
             padding-bottom: 6px;
+            transform: translateX(15px);
         }
 
         .c-list__image {
             width: 154px;
         }
+        @include sp {
+            transform: translateX(0);
+
+            .c-list__title {
+                transform: translateX(0) !important;
+            }
+        }
     }
 
     .c-list__item5 {
-        width: 25%;
+        width: 25.2%;
+
+        .c-list__image {
+            min-width: fit-content;
+        }
 
         .c-list__body {
             margin-top: 55px;
@@ -112,13 +133,12 @@
             margin-left: -10px;
             margin-top: -18px;
             letter-spacing: 1.5px;
-            white-space: nowrap;
             padding-left: 8px;
         }
     }
 
     .c-list__item6 {
-        width: 30%;
+        width: 25%;
 
         .c-list__image {
             width: 155px;
@@ -146,165 +166,81 @@
         .c-list__img {
             margin-top: 0;
         }
+
+
     }
 
     .c-list__item7 {
-        width: 20%;
-
+        width: 23%;
+    
         .c-list__body {
+            flex-direction: row-reverse;
             padding-top: 77px;
-            padding-left: 44px;
+            transform: translateX(-15px);
+            @include tab {
+                flex-direction: row;
+            }
         }
-
+    
         .c-list__title {
             letter-spacing: 1.5px;
             margin-top: -20px;
-            margin-left: -235px;
-            padding-right: 15px;
+            padding-right: 6px;
+            transform: translateX(3px);
         }
+    
+        @include sp {
+            .c-list__body {
+                flex-direction: row !important;
+            }
+        }
+    
     }
 
     .c-list__item8 {
+        width: 27%;
+        transform: translateX(-40px);
+    
         .c-list__body {
-            position: relative;
-            margin-top: -10px;
-            padding-left: 60px;
+            flex-direction: row-reverse;
+            margin-top: -5px;
+            @include tab {
+                flex-direction: row;
+            }
         }
-
+    
         .c-list__title {
-            position: absolute;
-            top: 41px;
-            left: -65px;
             padding-left: 0;
             letter-spacing: 1.5px;
-            padding-right: 30px;
-            padding-bottom: 5px;
+            padding-right: 7px;
+            padding-bottom: 4px;
+            margin-top: -32px;
+            transform: translateX(-4px);
+        }
+        @include sp {
+            transform: translateX(0);
+
+            .c-list__title {
+                left: 14px !important;
+                top: 22px !important;
+            }
         }
     }
-
-    //intro---------------------------
-    .c-intro {
-        margin: 0 auto;
-        margin-bottom: 70px;
-        padding-top: 100px;
-        padding-bottom: 110px;
-        background: #f5f4ed;
-
-        .c-intro__footer {
-            line-height: 1.62;
-        }
-
-        .c-intro__footertitle {
-            font-size: 3rem;
-            color: $text-primary-color;
-            text-align: center;
-            letter-spacing: 3px;
-            font-weight: 400;
-        }
-
-        .c-intro__footerdesc {
-            font-size: 1.2rem;
-            color: $blackLight;
-            text-align: center;
-            letter-spacing: 1.4px;
-        }
-    }
-
-
-    .c-qa {
-        padding-left: 85px;
-        padding-bottom: 60px;
-    }
-
-    .c-qa__title {
-        font-size: 3.6rem;
-        line-height: 1.62;
-        color: $text-primary-color;
-        text-align: center;
-        margin-left: -93px;
-        letter-spacing: -3px;
-        margin-bottom: 41px;
-        font-weight: 400;
-    }
-
-    .c-qa__listitem {
-        max-width: 850px;
-        padding-bottom: 45px;
-    }
-
-    .c-qa__listtitle {
-        display: flex;
-        align-items: center;
-        padding-bottom: 5px;
-    }
-
-    .c-qa__listicon {
-        background-image: url("./assets/img/dtIcon.png");
-        background-repeat: no-repeat;
-        width: 59px;
-        height: 55px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 15px;
-        font-size: 2.6rem;
-        line-height: 1.31;
-        color: $blackLight;
-    }
-
-    .c-qa__listtext {
-        font-size: 1.4rem;
-        color: $text-primary-color;
-        letter-spacing: 1.3px;
-    }
-
-    .c-qa__listdesc {
-        font-size: 1.4rem;
-        color: $blackLight;
-        line-height: 1.6;
-        letter-spacing: 1.3px;
-    }
-
-    //process -----------------------------------
-    .c-process {
-        padding-bottom: 85px;
-    }
-
-    .c-process__header {
-        background-image: url("./assets/img/processHeader.png");
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 280px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: $blackLight;
-        border-radius: 60px;
-    }
-    
-    .c-process__title {
-        font-size: 2rem;
-        line-height: 0;
-        letter-spacing: -0.1px;
-        margin-left: -13px;
-        font-weight: 400;
-    }
-
-    .c-process__titlebig {
-        font-size: 4.5rem;
-        letter-spacing: 4px;
-        line-height: 1.7;
-        font-weight: 400;
-    }
-
-    //banner footer
-    .c-bannerfooter {
-        padding-bottom: 120px;
-    }
-
 }
 
+
+//banner footer
+.c-bannerfooter {
+    padding-bottom: 120px;
+
+    .c-bannerfooter__img {
+        border-radius: 50px;
+        overflow: hidden;
+        @include tab {
+            border-radius: 25px;
+        }
+    }
+}
 
 
 @include sp {
@@ -315,7 +251,7 @@
         }
 
         .c-bannerlist__title {
-            margin-bottom: 123px;
+            margin-bottom: 23px;
         }
 
         .c-bannerlist__titletop {
@@ -337,7 +273,7 @@
             }
 
             .c-list__item {
-                width: 100%;
+                width: 100% !important;
             }
 
             .c-list__body {
@@ -372,7 +308,7 @@
 
             .c-list__item1 {
                 .c-list__body {
-                    margin-left: 28px;
+                    margin-left: 20px;
                 }
 
                 .c-list__title {
@@ -409,7 +345,7 @@
 
             .c-list__item3 {
                 .c-list__body {
-                    margin-left: 25px;
+                    margin-left: 20px;
                 }
 
                 .c-list__title {
@@ -439,6 +375,7 @@
                     padding-left: 0;
                     padding-right: 4px;
                     margin-top: 35px;
+                    margin-left: 10px;
                 }
 
                 .c-list__img {
@@ -496,7 +433,7 @@
 
             .c-list__item7 {
                 .c-list__body {
-                    margin-left: 32px;
+                    margin-left: 47px;
                 }
 
                 .c-list__title {
@@ -526,106 +463,7 @@
                     width: 81px;
                 }
             }
-
-
         }
-
-
-        //qa
-        .c-qa {
-            padding-left: 0;
-            padding-bottom: 20px;
-
-            .c-qa__listitem {
-                padding-bottom: 15px;
-            }
-
-            .c-qa__title {
-                margin-left: 0;
-                font-size: 2rem;
-                font-weight: normal;
-                margin-bottom: 13px;
-                letter-spacing: -2px;
-            }
-
-            .c-qa__listtext {
-                font-size: 1.3rem;
-                letter-spacing: 1.4px;
-                line-height: 1.8;
-                word-break: break-word;
-            }
-
-            .c-qa__listtitle {
-                padding-bottom: 0;
-            }
-
-            .c-qa__listdesc {
-                font-size: 1.3rem;
-                line-height: 1.7;
-            }
-
-            .c-qa__listicon {
-                margin-right: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-size: contain;
-                background-position: center;
-                font-size: 1.8rem;
-                padding: 12px;
-                width: 40px;
-                height: 37px;
-            }
-        }
-
-        //processs
-        .c-process {
-            padding-bottom: 27px;
-
-            .c-process__header {
-                background-image: url("./assets/img/bannerprocess.png");
-                background-position: center;
-                background-size: cover;
-                width: 250px;
-                height: 250px;
-                border-radius: 20px;
-                margin: 0 auto 74px;
-            }
-
-            .c-process__title,
-
-            .c-process__titlebig {
-                display: none;
-            }
-
-
-        }
-
-        .c-intro {
-            padding-top: 38px;
-            padding-bottom: 57px;
-            margin-bottom: 32px;
-
-            .c-intro__footertitle {
-                display: none;
-            }
-
-            .c-intro__footertitlemb {
-                color: $text-primary-color;
-                font-size: 1.8rem;
-                margin-bottom: 25px;
-                display: block !important;
-                text-align: center;
-                letter-spacing: 1.6px;
-                transform: translateX(1px);
-            }
-
-            .c-intro__footerdesc {
-                font-size: 1.3rem;
-                letter-spacing: 1.3px;
-            }
-        }
-
 
         //banner footer
         .c-bannerfooter {
@@ -633,11 +471,15 @@
             width: 250px;
             margin: auto;
 
+            .c-bannerfooter__img {
+                border-radius: 25px;
+            }
+
             img {
                 width: 325px;
             }
         }
-        
+
     }
 
 }

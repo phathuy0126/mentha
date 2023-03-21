@@ -17,8 +17,9 @@
         letter-spacing: 1px;
         cursor: pointer;
 
-        &:hover {
-            opacity: 0.8;
+        &:hover,
+        &.is-active {
+            opacity: 0.7;
         }
 
         a {

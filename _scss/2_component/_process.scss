@@ -1,0 +1,57 @@
+//process -----------------------------------
+.c-process {
+    padding-bottom: 85px;
+}
+
+.c-process__header {
+    background-image: url("./assets/img/processHeader.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    border-radius: 50px;
+    overflow: hidden;
+    color: $blackLight;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 30px;
+}
+
+.c-process__title {
+    font-size: 2rem;
+    line-height: 0;
+    letter-spacing: -0.1px;
+    margin-left: -13px;
+    font-weight: 400;
+}
+
+.c-process__titlebig {
+    font-size: 4.5rem;
+    letter-spacing: 4px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+@include sp {
+    //processs
+    .c-process {
+        padding-bottom: 27px;
+
+        .c-process__header {
+            background-image: url("./assets/img/bannerprocess.png");
+            background-position: center;
+            background-size: cover;
+            width: 250px;
+            height: 250px;
+            border-radius: 25px;
+            margin: 0 auto 74px;
+        }
+
+        .c-process__title,
+
+        .c-process__titlebig {
+            display: none;
+        }
+
+
+    }
+}
